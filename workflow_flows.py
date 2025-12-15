@@ -25,3 +25,10 @@ def post_etl_flow():
 @flow
 def notification_flow():
     return "Notification sent"  # Logs not visible
+
+
+# Main entry point
+if __name__ == "__main__":
+    etl_flow(job_name="Morning ETL")
+    post_etl_flow()
+    notification_flow()
